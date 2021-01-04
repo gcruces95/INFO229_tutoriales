@@ -167,7 +167,13 @@ git show nombreTag
 ```
 
 ## 3. GitHub
+
+GitHub es una plataforma online y gratuita que permite el trabajo remoto en proyectos Git. Recordar que Git y GitHub son cosas distintas
+
 ### 3.1 Crear una cuenta en Github
+
+Para crear una cuenta haga click [aquí](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home). Recuerde que crearse una cuenta en GitHub es totalmente gratis.
+
 ### 3.1 Crear una nuevo repositorio
 ### 3.1 Subir los tags
 ### 3.1 Push
