@@ -91,9 +91,26 @@ ada910e Second commit
 ```
 
 Para mayor información visite [aquí](https://git-scm.com/book/es/v2/Herramientas-de-Git-Reiniciar-Desmitificado)
+
 ### 2.4 Renombrar archivos
+
+Puede que queramos renombrar un archivo, es recomendable hacerlo directamente en la línea de comandos para registrar los cambios con git.
+```
+// Cambiar nombre
+git mv nombreOriginal.vue nombreNuevo.vue
+```
+
 ### 2.5 Eliminar archivos
+```
+// Cambiar nombre
+git rm nombreArchivo.vue
+```
 ### 2.6 Ignorando Archivos
+```
+arhivo.js // Ignora el archivo en cuestion
+*.js // Ignora todos los arhivos con extensión .js
+node_modules/ //Ignora toda la carpeta
+```
 ### 2.7 Ramas o branch
 ### 2.8 Tags
 ## 3. GitHub
