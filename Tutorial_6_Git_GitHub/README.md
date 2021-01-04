@@ -79,7 +79,7 @@ git log --oneline
 git log --oneline --decorate --all --graph
 ```
 
-### 2.3 Viajes a través de los commit (control de versiones)
+### 2.2 Viajes a través de los commit (control de versiones)
 
 Se tienen los siguientes commit
 ```
@@ -92,7 +92,7 @@ ada910e Second commit
 
 Para mayor información visite [aquí](https://git-scm.com/book/es/v2/Herramientas-de-Git-Reiniciar-Desmitificado)
 
-### 2.4 Renombrar archivos
+### 2.3 Renombrar archivos
 
 Puede que queramos renombrar un archivo, es recomendable hacerlo directamente en la línea de comandos para registrar los cambios con git.
 ```
@@ -100,18 +100,18 @@ Puede que queramos renombrar un archivo, es recomendable hacerlo directamente en
 git mv nombreOriginal.vue nombreNuevo.vue
 ```
 
-### 2.5 Eliminar archivos
+### 2.4 Eliminar archivos
 ```
 // Cambiar nombre
 git rm nombreArchivo.vue
 ```
-### 2.6 Ignorando Archivos
+### 2.5 Ignorando Archivos
 ```
 arhivo.js // Ignora el archivo en cuestion
 *.js // Ignora todos los arhivos con extensión .js
 node_modules/ //Ignora toda la carpeta
 ```
-### 2.7 Ramas o branch
+### 2.6 Ramas o branch
 
 Las ramas o branch son caminos paralelos que toma el código, un repositorio puede tener muchos brazos y al hacer los commit correspondientes, estos brazos se pueden fusionar con el frazo prinncipal o brazo master.
 
@@ -141,7 +141,7 @@ git branch -d nombreRama
 // Crear la nuevaRama y viajar a ella
 git checkout -b nuevaRama
 ```
-### 2.8 Tags
+### 2.7 Tags
 
 Los Tags se utilizan para crear versiones y facilitar la descarga de archivos.
 
