@@ -112,7 +112,60 @@ arhivo.js // Ignora el archivo en cuestion
 node_modules/ //Ignora toda la carpeta
 ```
 ### 2.7 Ramas o branch
+
+Las ramas o branch son caminos paralelos que toma el código, un repositorio puede tener muchos brazos y al hacer los commit correspondientes, estos brazos se pueden fusionar con el frazo prinncipal o brazo master.
+
+```
+// Crea una nueva rama
+git branch nombreRama
+```
+```
+// Nos muestra en que rama estamos
+git branch
+```
+```
+// Nos movemos a la nueva rama
+git checkout nombreRama
+```
+Para ejecutar los siguientes comandos, debe estar en la rama master.
+
+```
+// Fusionamos la nueva rama con la rama master
+git merge nombreRama
+```
+```
+// Eliminar una rama
+git branch -d nombreRama
+```
+```
+// Crear la nuevaRama y viajar a ella
+git checkout -b nuevaRama
+```
 ### 2.8 Tags
+
+Los Tags se utilizan para crear versiones y facilitar la descarga de archivos.
+
+```
+// Crear un tags con nombre "versión alpha"
+git tag versionAlpha -m "versión alpha"
+```
+```
+// Listar tags
+git tag
+```
+```
+// Borrar tags
+git tag -d nombreTags
+```
+```
+// Hacer una versión en un commit anterior ej: f52f3da
+git tag -a nombreTag f52f3da -m "version alpha"
+```
+```
+// Mostrar información del tag
+git show nombreTag
+```
+
 ## 3. GitHub
 ### 3.1 Crear una cuenta en Github
 ### 3.1 Crear una nuevo repositorio
