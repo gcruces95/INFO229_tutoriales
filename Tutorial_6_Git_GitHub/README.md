@@ -236,4 +236,5 @@ git clone https://github.com/usuario/nombreRepositorio.git nombreCarpeta
 
 ## 4. Conclusion
 
+En resumidas cuentas nosotros realizamos cambios en nuestros archivos, el comando status verificará que archivos han sidos modificados. Cuando deseemos registrar esos cambios tendremos que agregarlos con add . así ya estará listo para poder hacer un commit. El commit realiza la copia de ese instante para poder volver en el tiempo si es que es necesario.
 
