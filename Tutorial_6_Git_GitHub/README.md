@@ -175,9 +175,65 @@ GitHub es una plataforma online y gratuita que permite el trabajo remoto en proy
 Para crear una cuenta haga click [aquí](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home). Recuerde que crearse una cuenta en GitHub es totalmente gratis.
 
 ### 3.1 Crear una nuevo repositorio
+
+Una vez registrados y dentro de GitHub, debemos crear un nuevo repositorio. Cuando ya tengamos el repositorio creado, debemos enlazarlo con el repositorio local.
+
+```
+// Enlaza el repositorio local con el repositorio remoto (Se usa una vez)
+git remote add origin https://github.com/usuario/nombreRepositorio.git
+```
+```
+// Sube el repositorio local al repositorio remoto
+// Los archivos deben tener almenos un commit
+git push -u origin master
+```
+
+**NOTA:** Cuando se ingresen los comando anteriores, se nos pedirá ingresar nuestro usuario y contraseña de GitHub.
+
+```
+// Nos muestra en que repositorio estamos enlazados remotamente.
+git remote -v
+```
 ### 3.1 Subir los tags
+
+Si tienes versiones guardadas en tu proyecto Git, deberas usar el siguiente comando para subir los Tags a GitHub.
+
+```
+git push --tags
+```
+
 ### 3.1 Push
+
+Push se utiliza para subir los cambios locales al servidor remoto. (Debe existir un commit)
+
+```
+git push
+```
+
 ### 3.1 Pull
+
+Pull se utiliza para bajar al repositorio los cambios que se realizan en el servidor remoto.
+
+```
+git pull
+```
+
 ### 3.1 Fetch
+
+Este comando hace la comparación de nuestros archivos locales con los del servidor, si existiera alguna diferencia nos pediría realizar un get pull para realizar un match de nuestros arhivos locales.
+
+```
+git fetch
+```
+
 ### 3.1 Clonar repositorio
-## 4. Ejemplo práctico
+
+
+Para descargar un repositorio completo basta con tomar la url ej: https://github.com/usuario/nombreRepositorio.git y ejecutar el siguiente comando en alguna carpeta de su computadora.
+```
+git clone https://github.com/usuario/nombreRepositorio.git nombreCarpeta
+```
+
+## 4. Conclusion
+
+
