@@ -1,12 +1,12 @@
 package main
 
-import(
+import (
 	"fmt"
 )
 
-func main(){
+func main() {
 	var edad int
-	fmt.Println("Ingresa tu edad: ")
+	fmt.Printf("Ingresa tu edad: \n")
 	//fmt.Scanln(&edad)
 	//fmt.Println("Mi edad es: ", edad)
 	fmt.Scanf("%d\n", &edad)
