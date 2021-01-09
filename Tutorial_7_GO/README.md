@@ -226,11 +226,207 @@ func main() {
 }
 ```
 ## 7. Ciclos
+
+```
+package main
+
+import "fmt"
+
+func main() {
+	//Ciclo for estandar
+	//la variable i se inicia en 0, se ejecutara mientras i sea menor a 10, cada pasada por el ciclo el valor de i aumenta en 1.
+	for i := 0; i < 10; i++ {
+		//imprime el valor de i.
+		fmt.Println(i)
+	}
+	fmt.Println("")
+	//
+	j := 0
+	for j < 10 {
+		fmt.Println(j)
+		j++
+	}
+	fmt.Println("")
+	//Ciclo for que simula a while.
+	g := 0
+	for {
+		fmt.Println(g)
+		g++
+		if g >= 10 {
+			//break se usa pasa cortar la ejecucion del ciclo.
+			break
+		}
+	}
+}
+```
+
 ## 8. Arrelos y Slices
+
+```
+package main
+
+import "fmt"
+
+func main() {
+	// Se genera un arreglo de largo 10 y tipo de variable int.
+	// Por defecto, cada valor del arrelo es 0.
+	var arreglo1 [10]int
+	fmt.Println(arreglo1)
+	// Se genera un arreglo de largo 3 y tipo de variable int.
+	// Los valores del arreglo son 1,2,3.
+	arreglo2 := [3]int{1, 2, 3}
+	fmt.Println(arreglo2)
+	// Se genera un arreglo de largo 4 y tipo de variable int.
+	// Los valores del arreglo son 1,2,3 y por defecto la ultima posicion tiene el valor 0.
+	arreglo3 := [4]int{1, 2, 3}
+	// Se le asigna el valor 4 a la posicion 4 de arrelo3.
+	arreglo3[3] = 4
+	fmt.Println(arreglo3)
+	//len se usa para saber el largo del arreglo
+	fmt.Println(len(arreglo1))
+}
+```
+```
+package main
+
+import "fmt"
+
+func main() {
+	// Se genera un Slice cuyos valores seran 1,2,3,4 de tipo int.
+	// No es necesario declarar el largo como en los arreglos.
+	slice1 := []int{1, 2, 3, 4}
+	fmt.Println(slice1)
+	// A diferencia de un arreglo, si no de asignan valores al slice, su valor es nulo.
+	var slice2 []int
+	fmt.Println(slice2)
+	// Se usa len para saber el largo del slice
+	fmt.Println(len(slice1))
+	//Generaremos un slice a partir de un arreglo
+	arreglo := [3]int{1, 2, 3}
+	// Se genera el slice a partir de las posiciones 1 al 2 del arreglo
+	// arreglo[:2] se define como slicing
+	slice3 := arreglo[:2]
+	fmt.Println(slice3)
+}
+
+```
+
 ## 9. Make y Append
+
+```
+package main
+
+import "fmt"
+
+func main() {
+	// estructura -> make(tipo_dato, Longitud, Capacidad)
+	// Si se omite la capacidad, este toma el valor de la longitud
+	slice := make([]int, 3, 5)
+	fmt.Println(slice)
+	// Se usa len para obtener el largo del slice
+	fmt.Println(len(slice))
+	// Se usa cap para obtener la capacidad del slice
+	fmt.Println(cap(slice))
+	// Se usa apend para agregar un elemento al slice
+	slice = append(slice, 2)
+	fmt.Println(slice)
+}
+```
+
 ## 10. Copy
+
+```
+package main
+
+import "fmt"
+
+func main() {
+	arreglo := []int{1, 2, 3, 4}
+	fmt.Println(arreglo)
+	// Se genera un arreglo vacío de longitud 4
+	copia_arreglo := make([]int, 4)
+	fmt.Println(copia_arreglo)
+	// Usaremos la funcion copy, que sirve para copiar un arreglo
+	// estructura -> copy(destino, fuente)
+	// Copiamos el contenido del arreglo "arreglo", en el arreglo "copia_arreglo"
+	copy(copia_arreglo, arreglo)
+	fmt.Println(copia_arreglo)
+}
+
+```
+
 ## 11. Punteros
+
+```
+package main
+
+import "fmt"
+
+func main() {
+	/*
+		1.	Es una direccion de memoria
+		2.	En lugar del valor, tenemos la direccion en la que esta el valor
+		3.	X, Y => as123d => 5		--	las variables X e Y apuntan a una direccion de memoria y el valor almacenado en esa direccion de memoria es 5.
+		4.	X => as123d => 6		--	X cambia el valor almacenado en la direccion de memoria de 5 a 6.
+		5.	El valor de las variables X e Y será 6.
+		6.	*T	=>	*int, *string, *Struct
+		7.	valor zero => nil
+	*/
+
+	var x, y *int
+	entero := 5
+	// & se usa para acceder a la direccion de memoria.
+	x = &entero
+	y = &entero
+	// Se cambia el valor almacenado en la direccion de memoria de 5 a 6.
+	*x = 6
+	// Imprime las direcciones de memoria.
+	fmt.Println(x)
+	fmt.Println(y)
+	// Imprime el valor almacenado en la direccion de memoria.
+	fmt.Println(*x)
+	fmt.Println(*y)
+}
+```
+
 ## 12. Struct
+
+```
+package main
+
+import "fmt"
+
+/*
+	1.	Se usa para generar nuestras propias estructuras con tipo de datos.
+	2.	type nombreEstructura struct{
+		atributos de la estructura
+	}
+*/
+
+type User struct {
+	edad             int
+	nombre, apellido string
+}
+
+func main() {
+	//	Se crea la variable tipo User especificando parametros yatributos, no importa el orden
+	persona1 := User{nombre: "Pepo", apellido: "Perez", edad: 30}
+	fmt.Println(persona1)
+	//	Si no se especifica los parametros, se deben ingresar los atributos en orden.
+	persona2 := User{33, "Lala", "Lila"}
+	fmt.Println(persona2)
+	//	Imprime una struct sin declararla en variable.
+	fmt.Println(User{nombre: "Pepa", apellido: "Lopez", edad: 25})
+	//	Otra forma de declarar
+	persona3 := new(User)
+	persona3.nombre = "Lalo"
+	persona3.apellido = "Lulu"
+	persona3.edad = 45
+	fmt.Println(*persona3)
+}
+
+```
+
 ## 13. Otros
 
 En conclusion, en este tutorial hemos visto lo básico de Golang, este tutorial seguirá en desarrollo.
