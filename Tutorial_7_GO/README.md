@@ -69,10 +69,10 @@ Package fmt implements formatted I/O with functions analogous to C's printf and 
 package main
 
 //
-import "fmt"
+import "fmt"	//Se importa libreria fmt
 
 func main() {
-	fmt.Println("Hola mundo")
+	fmt.Println("Hola mundo")	// Se usa para mostrar un mensaje en terminal
 }
 ```
 **NOTA:** Para obtener más información sobre libreria "fmt", haga click [Aquí](https://golang.org/pkg/fmt/)
@@ -98,8 +98,10 @@ import "fmt"
 func main() {
 	//var nombre_variable tipo_dato
 	var x int
+	//Se le asigna una valor int a una variable declarada como int
 	x = 23
-	y := 50 //El operador := reconoce el tipo de variable y asigna el valor
+	//El operador := reconoce el tipo de variable y asigna el valor, es una variante de var nombre_variable tipo_dato
+	y := 50 
 	fmt.Println(x, y)
 }
 ```
@@ -110,13 +112,16 @@ package main
 
 import (
 	"fmt"
-	"strconv"
+	"strconv"	//Se importa libreria strconv
 )
 
 func main() {
 	edad1 := 22
 	edad2 := "33"
+	//strconv.Itoa convierte una variable int a string.
 	edad_str := strconv.Itoa(edad1)
+	//strconv.Atoi convierte una variable string a int.
+	//strconv.Atoi devuelve multiples valores, pero como nos interesa solo 1 ignoramos el resto usando "_".
 	edad_int, _ := strconv.Atoi(edad2)
 	fmt.Println("Mi edad es: " + edad_str)
 	fmt.Println("Tu edad es: ", edad_int)
@@ -124,23 +129,62 @@ func main() {
 ```
 
 ## 5. Entrada y salida de datos
+
+### 5.1 Verbos
+
+```
+%v	the value in a default format
+	when printing structs, the plus flag (%+v) adds field names
+%#v	a Go-syntax representation of the value
+%T	a Go-syntax representation of the type of the value
+%%	a literal percent sign; consumes no value
+```
+
+**NOTA:** Para obtener más información sobre libreria "fmt" y los **verbos** haga click [Aquí](https://golang.org/pkg/fmt/)
+
+### 5.2 Input/Output
+
 ```
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
 	var edad int
 	fmt.Printf("Ingresa tu edad: \n")
-	//fmt.Scanln(&edad)
-	//fmt.Println("Mi edad es: ", edad)
 	fmt.Scanf("%d\n", &edad)
 	fmt.Printf("Mi edad es: %d\n", edad)
 }
 ```
+
 ## 6. Condiciones
+
+Dentro de las condicionales que tenemos en Go, se encuentran:
+```
+* if
+* else if
+* else
+```
+El if es un condicional el cual se ejecuta cuando la condicion que se evalua es true.
+Si la condicion es falsa, pasa a else if.
+Si la condicion de else if es falsa, se pasa a else, el cual se ejecuta por descarte como ultima opción.
+```
+package main
+
+import "fmt"
+
+func main() {
+	//Como la condicion es verdadera, se ejecutan las instrucciones dentro del if
+	if condicion {
+		fmt.Printf("Se cumple la condicion, por ende entra al if")
+  	} else condicion {
+		fmt.Printf("No se cumple la condicion del if, pero si la de else if")
+	} else {
+		fmt.Printf("No se cumplio ninguna condicion anterior")
+	}
+}
+```
+
 ```
 package main
 
