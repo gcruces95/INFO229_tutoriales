@@ -49,13 +49,14 @@ Herramientas de automatización
 
 ### 1.5 Instalación
 
-Puede descargar haciendo click [Aquí](https://golang.org/dl/)
+Para descargar e instalar Go haz click [Aquí](https://golang.org/dl/)
 
 
 ## 2. Primer Código
 ### 2.1 Hello World
 
-Codigo base, debe ir si o si el package main
+Todos los programas en go tienen como package el "main", y luego declaran una función homónima dentro del programa. Si el programa no tiene el package
+bien declarado no será ejecutable. Por otro lado sin el main existirá un error de compilación. 
 ```
 package main
 
@@ -64,7 +65,7 @@ func main() {
 }
 ```
 
-Package fmt implements formatted I/O with functions analogous to C's printf and scanf. The format 'verbs' are derived from C's but are simpler.
+El paquete fmt nos permitirá imprimir y además implementa formatos E/S con funciones análogas a las del lenguaje C tales como printf y scanf. El formato de los 'verbos' son derivados también de C pero son más simples.
 ```
 package main
 
@@ -76,20 +77,26 @@ func main() {
 }
 ```
 **NOTA:** Para obtener más información sobre libreria "fmt", haga click [Aquí](https://golang.org/pkg/fmt/)
+**NOTA:** Al igual que otros lenguajes go necesita puntos y coma, pero el mismo compilador de go se encarga de colocar los ';' , por lo que no es necesario escribirlos.
 
 ### 2.2 Compiladores
 
-Genera un archivo compilado en codio binario, el cual hace que el codigo se pueda ejecutar en cualquier sistema operativo.
+Al compilar nuestro código se genera un archivo compilado en lenguaje máquina, el cual hace que el código se pueda ejecutar en cualquier sistema operativo. Para compilar el código y generar el archivo ejecutable se debe escribir en consola lo siguiente:
 ```
-go buil nombreArchivo.go
+go build nombreArchivo.go
 ```
-Compila el codigo, pero no genera archivo, y ejecuta directamente en consola.
+Otra opción es compilar el código y ejecutarlo directamente en la consola de la siguiente forma: (Al ejecutar en consola no se creará el ejecutable como con go build)
 ```
 go run nombreArchivo.go
 ```
 ## 3. Declaración de variables
 
+Las variables declaradas en go deben establecer un tipo de dato, el cual no debe cambiar en el futuro.(Una variable tipo string no puede almacenar un número, pues el tipo ya estará definido)
+Las variables se declaran de la siguiente manera:
+```
 var nombre_variable tipo_dato
+```
+Donde var deberá ir siempre que declaremos una variable, mientras que nombre_variable y tipo_dato dependerán del tipo de variable con el que se trabaje.
 ```
 package main
 
@@ -105,8 +112,20 @@ func main() {
 	fmt.Println(x, y)
 }
 ```
+**NOTA:** Go permite también declarar el tipo de variable a más de una variable al mismo tiempo, a modo de ejemplo podemos probar a declarar 3 enteros diferentes:
+```
+var x,y,z int
+
+```
+Otra forma de declarar variables es omitir el tipo de dato utilizando ':=', el cual se encargará de autodefinir el tipo de dato de la variable que estamos declarando.
+```
+x:= 23
+
+```
 
 ## 4. Conversión de tipos
+
+Utilizaremos la librería "strconv", la cual nos permitirá convertir el tipo de dato de las variables declaradas a la hora de utilizarlas.
 ```
 package main
 
