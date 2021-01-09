@@ -78,7 +78,7 @@ func main() {
 ```
 **NOTA:** Para obtener más información sobre libreria "fmt", haga click [Aquí](https://golang.org/pkg/fmt/)                                                                                 
 
-**NOTA:** Al igual que otros lenguajes go necesita puntos y coma(';'), pero el mismo compilador de go se encarga de colocarlos, por lo que no es necesario escribirlos.
+**NOTA:** Al igual que otros lenguajes go necesita puntos y coma(;), pero el mismo compilador de go se encarga de colocarlos, por lo que no es necesario escribirlos.
 
 ### 2.2 Compiladores
 
@@ -92,12 +92,12 @@ go run nombreArchivo.go
 ```
 ## 3. Declaración de variables
 
-Las variables declaradas en go deben establecer un tipo de dato, el cual no debe cambiar en el futuro.(Una variable tipo string no puede almacenar un número, pues el tipo ya estará definido)
+Las variables declaradas en go deben establecer un tipo de dato, el cual no debe cambiar en el futuro (Una variable tipo string no puede almacenar un número, pues el tipo ya estará definido).
 Las variables se declaran de la siguiente manera:
 ```
 var nombre_variable tipo_dato
 ```
-Donde var deberá ir siempre que declaremos una variable, mientras que nombre_variable y tipo_dato dependerán del tipo de variable con el que se trabaje.
+Donde 'var' deberá escribirse siempre que declaremos una variable, mientras que nombre_variable y tipo_dato dependerán del tipo de variable con el que se trabaje.
 ```
 package main
 
@@ -118,7 +118,7 @@ func main() {
 var x,y,z int
 
 ```
-Otra forma de declarar variables es omitir el tipo de dato utilizando ':=', el cual se encargará de autodefinir el tipo de dato de la variable que estamos declarando.
+Otra forma de declarar variables es omitir 'var' junto con el tipo de dato utilizando ':=', el cual se encargará de autodefinir el tipo de dato de la variable que estamos declarando.
 ```
 x:= 23
 
