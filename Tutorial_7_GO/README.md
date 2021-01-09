@@ -3,15 +3,18 @@
 Este tutorial es inspirado del tutorial de [CodigoFacilito](https://codigofacilito.com/cursos/go). Introduce los conceptos básicos del lenguaje de programación [GO](https://golang.org/).
 
  1. Introducción 
- 2. Hola mundo
- 3. Variables
+ 2. Primer código
+ 3. Declaración de variables
  4. Conversión de tipos
- 5. Operadores
- 6. Impresión y lectura
- 7. Condicionales ciclos
- 8. Funciones
- 9. Arreglos
- 10. Slides
+ 5. Entrada y salida de datos
+ 6. Condiciones
+ 7. Ciclos
+ 8. Arrelos y Slices
+ 9. Make y Append
+ 10. Copy
+ 11. Punteros
+ 12. Struct
+ 13. Otros
 
 
 ## 1. Introducción
@@ -223,3 +226,11 @@ func main() {
 }
 ```
 ## 7. Ciclos
+## 8. Arrelos y Slices
+## 9. Make y Append
+## 10. Copy
+## 11. Punteros
+## 12. Struct
+## 13. Otros
+
+En conclusion, en este tutorial hemos visto lo básico de Golang, este tutorial seguirá en desarrollo.
