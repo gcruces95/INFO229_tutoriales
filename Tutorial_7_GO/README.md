@@ -55,8 +55,8 @@ Para descargar e instalar Go haz click [Aquí](https://golang.org/dl/)
 ## 2. Primer Código
 ### 2.1 Hello World
 
-Todos los programas en go tienen como package el "main", y luego declaran una función homónima dentro del programa. Si el programa no tiene el package
-bien declarado no será ejecutable. Por otro lado sin el main existirá un error de compilación. 
+Todos los programas en go tienen como package un "main" el cual debe declararse al inicio, luego se declara una función homónima dentro del programa. Si este no tiene el package bien declarado no será ejecutable, mientras que sin la presencia del "main" se generará un error de compilación.
+
 ```
 package main
 
@@ -76,8 +76,9 @@ func main() {
 	fmt.Println("Hola mundo")	// Se usa para mostrar un mensaje en terminal
 }
 ```
-**NOTA:** Para obtener más información sobre libreria "fmt", haga click [Aquí](https://golang.org/pkg/fmt/)
-**NOTA:** Al igual que otros lenguajes go necesita puntos y coma, pero el mismo compilador de go se encarga de colocar los ';' , por lo que no es necesario escribirlos.
+**NOTA:** Para obtener más información sobre libreria "fmt", haga click [Aquí](https://golang.org/pkg/fmt/)                                                                                 
+
+**NOTA:** Al igual que otros lenguajes go necesita puntos y coma(';'), pero el mismo compilador de go se encarga de colocarlos, por lo que no es necesario escribirlos.
 
 ### 2.2 Compiladores
 
