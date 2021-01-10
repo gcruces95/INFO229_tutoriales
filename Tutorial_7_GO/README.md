@@ -130,6 +130,7 @@ x:= 23
 ## 4. Conversión de tipos
 
 Utilizaremos la librería "strconv", la cual nos permitirá convertir el tipo de dato de las variables declaradas a la hora de utilizarlas.
+
 ```
 package main
 
@@ -151,9 +152,19 @@ func main() {
 }
 ```
 
+**NOTA:** Para obtener más información sobre libreria "strconv", haga click [Aquí](https://golang.org/pkg/strconv/) 
+
 ## 5. Entrada y salida de datos
 
+Dentro de la sintaxis de Go para leer y mostrar datos, está presente el uso de verbos. Aqui usaremos la libreria "fmt" para la entrada y salida de datos.
+
+Tambien se puede usar la libreria "bufio".
+
+**NOTA:** Para obtener más información sobre libreria "bufio", haga click [Aquí](https://golang.org/pkg/bufio/) 
+
 ### 5.1 Verbos
+
+Tambien nombrados como verbos de formateo, se usan para el manejo de datos tanto de entrada como de salida.
 
 ```
 %v	the value in a default format
@@ -167,6 +178,8 @@ func main() {
 
 ### 5.2 Input/Output
 
+
+
 ```
 package main
 
@@ -175,6 +188,9 @@ import "fmt"
 func main() {
 	var edad int
 	fmt.Printf("Ingresa tu edad: \n")
+	// Se utiliza Scanf para leer desde consola.
+	// Scanf, recibe 3 parametros, el primero debe llevar un verdo segun corresponda al tipo de dato que se esta recibiendo,
+	// el segundo parametro debe colocarse un &variable, el cual indica donde se almacenara el dato ingresado.
 	fmt.Scanf("%d\n", &edad)
 	fmt.Printf("Mi edad es: %d\n", edad)
 }
@@ -207,6 +223,8 @@ func main() {
 	}
 }
 ```
+
+Ejemplo uso de condiciones.
 
 ```
 package main
