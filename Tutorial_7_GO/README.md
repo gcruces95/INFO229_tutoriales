@@ -245,6 +245,10 @@ func main() {
 ```
 ## 7. Ciclos
 
+Una caracteristica especial de GO, es que no existe la estrucctura de ciclo While. Solamente tenemos el ciclo For, el cual se forma de 3 parametros los cuales no son oblogatorios usar, y se pueden omitir para realizar variaciones de la estructura for.
+
+Ya que no existe el ciclo while, este se puede simular usando un for y un break, como se puede ver en el ejemplo siguiente.
+
 ```
 package main
 
@@ -280,6 +284,10 @@ func main() {
 
 ## 8. Arrelos y Slices
 
+Dentro de Go existen los arreglos, los cuales son estructuras discretas, en las cuales se debe definir el tipo de variable y el largo del arreglo, para reservar el espacio en memoria que usará.
+
+Como una variante a los arreglo se crearon los Slices, los cuales son arreglo pero con una estructura dinámica, no es necesaria que se defina el largo y se incluye el concepto de capacidad. La si un slice supera su capacidad, se reserva un nuevo espacio de memoria y pero este sigue enlazado al slice original.
+
 ```
 package main
 
@@ -304,6 +312,8 @@ func main() {
 	fmt.Println(len(arreglo1))
 }
 ```
+
+
 ```
 package main
 
@@ -352,6 +362,8 @@ func main() {
 ```
 
 ## 10. Copy
+
+Copy se usa para copiar el contenido de un arreglo en otro arreglo.
 
 ```
 package main
